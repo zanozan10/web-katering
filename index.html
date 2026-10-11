@@ -1,504 +1,250 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ojan Catering - Katering Simpel, Rasa Menggoda!</title>
+    <!-- CSS Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome untuk Ikon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts (Poppins) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ojan Catering</title>
-
-    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .buttonToTop {
-            width: 50px;
-            height: 50px;
-            background-color: #000;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            bottom: 60px;
-            right: 10px;
-            cursor: pointer;
-        }
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .hero-section {
+        background-color: #f8f9fa;
+        padding: 80px 0;
+      }
+      .feature-icon {
+        font-size: 2.5rem;
+        color: #ff9800;
+        margin-bottom: 15px;
+      }
+      .stats-section {
+        background-color: #ff9800;
+        color: white;
+        padding: 50px 0;
+      }
+      .btn-custom {
+        background-color: #ff9800;
+        color: white;
+        border-radius: 30px;
+        padding: 10px 25px;
+        font-weight: 600;
+      }
+      .btn-custom:hover {
+        background-color: #e68a00;
+        color: white;
+      }
     </style>
-</head>
-
-<body>
-
-    <div class="buttonToTop" onclick="scrollkeatas()">
-        Top
-    </div>
-
-    <nav class="sticky top-0 flex items-center justify-center p-4 bg-white shadow-md">
-        <div class="container mx-auto flex items-center justify-between">
-            <img alt="#" class="h-12" height="50" src="img/logo.webp" width="150" />
-            <div class="flex items-center space-x-8 font-bold">
-                <a href="index.html">Home</a>
-                <a href="profile.html">Profile</a>
-                <a href="blog.html">Blog</a>
-                <a href="galery.html">Galery</a>
-                <a href="contact us.html">Contact Us</a>
-            </div>
-            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                Pesan Sekarang!
-            </a>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.webp" alt="Ojan Catering" height="50" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active fw-semibold" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galery.html">Galery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact us.html">Contact Us</a>
+            </li>
+          </ul>
+          <a href="https://wa.me/6285526394417" class="btn btn-custom shadow-sm"
+            ><i class="fa-solid fa-whatsapp"></i> Pesan Sekarang!</a
+          >
         </div>
+      </div>
     </nav>
 
-
-    <div class="flex flex-col items-center justify-center h-full bg-black bg-opacity-50 text-white text-center px-4">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Katering Simpel, Rasa Menggoda!</h1>
-        <p class="text-lg md:text-xl mb-8">Dengan Ojan Catering, makanan lezat dan sehat kini bisa dinikmati tanpa
-            ribet. Hidangan kami diracik dengan cinta dan harga yang bersahabat! Dan ya, tidak ada yang bau-bau aneh
-            di sini!</p>
-        <div class="flex space-x-4">
-            <a href="#"
-                class="bg-transparent text-white py-2 px-4 rounded-md border border-white hover:bg-white hover:text-black transition">Lihat
-                Menu Kami</a>
-            <a href="#" class="bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition">Hubungi
-                Kami</a>
-        </div>
-    </div>
-
-    <div class="flex items-center justify-center min-h-screen">
-        <div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md flex">
-            <div class="w-1/2 pr-6">
-                <h1 class="text-3xl font-bold mb-4">
-                    Tentang Kami
-                </h1>
-                <p class="text-gray-700 mb-4">
-                    Sejak 2007, Ojan Catering telah menjadi teman setia Anda dalam menjalani gaya hidup sehat. Kami
-                    mengerti bahwa hidup itu sibuk, jadi biarkan kami yang mengurus makanan Anda! Makanan sehat,
-                    kualitas tinggi, dan harga terjangkau.
-                </p>
-            </div>
-            <div class="w-1/2">
-                <img alt="A crate filled with red onions and cabbages" class="rounded-lg" height="400" src="img/5.webp"
-                    width="600" />
-            </div>
-        </div>
-    </div>
-
-    <div class="max-w-6xl mx-auto py-12">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div class="flex flex-col items-center">
-                <div class="bg-green-100 p-4 rounded-full mb-4">
-                    <i class="fas fa-chart-bar text-3xl text-green-500"></i>
-                </div>
-                <h3 class="text-green-600 font-bold text-lg mb-2">Mudah dan Praktis</h3>
-                <p class="text-gray-600">Kami membuat proses pemesanan katering semudah mengklik tombol. Lebih sedikit
-                    repot, lebih banyak waktu untuk Anda!</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <div class="bg-green-100 p-4 rounded-full mb-4">
-                    <i class="fas fa-coins text-3xl text-green-500"></i>
-                </div>
-                <h3 class="text-green-600 font-bold text-lg mb-2">Rasa yang Menggoda</h3>
-                <p class="text-gray-600">Makanan kami bukan hanya sehat, tetapi juga menggugah selera. Siapa bilang
-                    makanan sehat itu membosankan?</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <div class="bg-green-100 p-4 rounded-full mb-4">
-                    <i class="fas fa-plane text-3xl text-green-500"></i>
-                </div>
-                <h3 class="text-green-600 font-bold text-lg mb-2">Harga Bersahabat</h3>
-                <p class="text-gray-600">Nikmati makanan berkualitas tanpa merogoh kocek terlalu dalam. Kualitas tinggi,
-                    harga rendah!</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="max-w-6xl mx-auto p-6 bg-white rounded-lg shadow-md flex items-center">
-        <div class="w-1/2 pr-8">
-            <h2 class="text-3xl font-bold mb-4">
-                Fitur Unggulan Kami
-            </h2>
-            <p class="text-gray-700 mb-6">
-                Kami menawarkan berbagai fitur yang membuat pengalaman katering Anda lebih menyenangkan dan bebas stres.
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <h1 class="display-4 fw-bold mb-3">
+              Katering Simpel,<br /><span style="color: #ff9800"
+                >Rasa Menggoda!</span
+              >
+            </h1>
+            <p class="lead text-secondary mb-4">
+              Dengan Ojan Catering, makanan lezat dan sehat kini bisa dinikmati
+              tanpa ribet. Hidangan kami diracik dengan cinta dan harga yang
+              bersahabat!
             </p>
-            <div class="mb-4">
-                <div class="flex items-start mb-2">
-                    <i class="fas fa-check-circle text-green-500 text-xl mr-2">
-                    </i>
-                    <div>
-                        <h3 class="text-xl font-semibold">
-                            Menu Sehat
-                        </h3>
-                        <p class="text-gray-700">
-                            Setiap porsi diracik oleh ahli gizi untuk memastikan Anda mendapatkan nutrisi yang tepat.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="mb-4">
-                <div class="flex items-start mb-2">
-                    <i class="fas fa-check-circle text-green-500 text-xl mr-2">
-                    </i>
-                    <div>
-                        <h3 class="text-xl font-semibold">
-                            Pengiriman Tepat Waktu
-                        </h3>
-                        <p class="text-gray-700">
-                            Kami mengutamakan kepuasan Anda dengan pengiriman yang selalu tepat waktu. Tidak ada lagi
-                            menunggu!
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="mb-4">
-                <div class="flex items-start mb-2">
-                    <i class="fas fa-check-circle text-green-500 text-xl mr-2">
-                    </i>
-                    <div>
-                        <h3 class="text-xl font-semibold">
-                            Kemasan Ramah Lingkungan
-                        </h3>
-                        <p class="text-gray-700">
-                            Kami menggunakan kemasan yang ramah lingkungan untuk menjaga planet kita tetap bersih. Makan
-                            enak, bumi pun senang!
-                        </p>
-                    </div>
-                </div>
-            </div>
+            <a href="#menu" class="btn btn-custom me-2">Lihat Menu Kami</a>
+            <a
+              href="contact us.html"
+              class="btn btn-outline-dark"
+              style="border-radius: 30px; padding: 10px 25px"
+              >Hubungi Kami</a
+            >
+          </div>
+          <div class="col-md-6 text-center">
+            <!-- Ganti link gambar ini dengan gambar makanan utamamu nanti -->
+            <img
+              src="img/5.webp"
+              alt="Makanan Lezat"
+              class="img-fluid rounded-4 shadow"
+              style="max-height: 400px; object-fit: cover"
+            />
+          </div>
         </div>
-        <div class="w-1/2">
-            <img alt="Three containers of healthy food with various colorful ingredients neatly arranged" height="400"
-                src="https://storage.googleapis.com/a1aa/image/e4LkbUAtopQlHytlmQFhLKfbHY8OPUejRxihLA8yizIi4MXnA.jpg"
-                width="600" />
-        </div>
-    </div>
+      </div>
+    </section>
 
-    <div class="bg-white p-8 rounded-lg shadow-lg flex items-center space-x-8">
-        <img alt="Woman in a blue and white striped shirt with long brown hair, smiling and looking to the side"
-            class="w-32 h-32 rounded-lg object-cover" height="150"
-            src="https://storage.googleapis.com/a1aa/image/fAn36vsdoH3uTiEZkkj4MUmrfpziI7PRnsKo2BSA2cx5gmrTA.jpg"
-            width="150" />
-        <div>
-            <div class="flex items-center mb-4">
-                <i class="fas fa-star text-yellow-500">
-                </i>
-                <i class="fas fa-star text-yellow-500">
-                </i>
-                <i class="fas fa-star text-yellow-500">
-                </i>
-                <i class="fas fa-star text-yellow-500">
-                </i>
-                <i class="fas fa-star text-yellow-500">
-                </i>
+    <!-- FITUR UNGGULAN -->
+    <section class="py-5">
+      <div class="container text-center py-5">
+        <h2 class="fw-bold mb-5">Kenapa Memilih Ojan Catering?</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
+              <i class="fa-solid fa-mobile-screen-button feature-icon"></i>
+              <h4 class="fw-bold">Mudah & Praktis</h4>
+              <p class="text-secondary">
+                Proses pemesanan semudah mengklik tombol. Lebih sedikit repot,
+                lebih banyak waktu untuk Anda!
+              </p>
             </div>
-            <p class="text-green-600 text-xl font-bold mb-2">
-                Ojan Catering mengubah cara saya melihat makanan sehat! Rasanya luar biasa dan sangat praktis!
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
+              <i class="fa-solid fa-utensils feature-icon"></i>
+              <h4 class="fw-bold">Rasa Menggoda</h4>
+              <p class="text-secondary">
+                Makanan kami bukan hanya sehat, tetapi juga menggugah selera.
+                Anti membosankan!
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-4 rounded-4">
+              <i class="fa-solid fa-tags feature-icon"></i>
+              <h4 class="fw-bold">Harga Bersahabat</h4>
+              <p class="text-secondary">
+                Nikmati makanan berkualitas tinggi tanpa merogoh kocek terlalu
+                dalam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATISTIK -->
+    <section class="stats-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3 mb-md-0">
+            <h1 class="display-4 fw-bold">5000+</h1>
+            <p class="fs-5 mb-0">Pelanggan Puas</p>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0">
+            <h1 class="display-4 fw-bold">1000+</h1>
+            <p class="fs-5 mb-0">Acara Diselenggarakan</p>
+          </div>
+          <div class="col-md-4">
+            <h1 class="display-4 fw-bold">16</h1>
+            <p class="fs-5 mb-0">Tahun Pengalaman</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+      <div class="container text-center text-md-start">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h4 class="fw-bold" style="color: #ff9800">Ojan Catering</h4>
+            <p class="text-white-50">
+              Makanan Sehat, Hidup Bahagia!<br />Wuluh Wetan, RT.002/RW.5, Kab.
+              Pekalongan, Jawa Tengah 51154
             </p>
-            <p class="text-gray-600">
-                — Olivia Rhye
-                <br />
-                Pelanggan Puas
-            </p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold">Tautan Cepat</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="index.html" class="text-white-50 text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="profile.html"
+                  class="text-white-50 text-decoration-none"
+                  >Profile</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact us.html"
+                  class="text-white-50 text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold">Sosial Media</h5>
+            <a
+              href="https://instagram.com/zan_ozan10"
+              class="text-white me-3 fs-4"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://facebook.com/fauzan.ennajmiey"
+              class="text-white me-3 fs-4"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://wa.me/6285526394417" class="text-white fs-4"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </div>
         </div>
-    </div>
-
-    <div class="text-center py-8">
-        <h1 class="text-4xl text-brown-700 font-bold">
-            Testimoni
-        </h1>
-    </div>
-    <div class="max-w-6xl mx-auto bg-white p-6 rounded-lg shadow-lg">
-        <div class="flex justify-between items-center mb-4">
-            <div>
-                <div class="flex items-center">
-                    <img alt="Google logo" class="mr-2" height="24"
-                        src="https://storage.googleapis.com/a1aa/image/mIY15h6LWtrkGtqbuvz3ii2cExX7ljNfPmuhLOUyCRXnfmrTA.jpg"
-                        width="24" />
-                    <h2 class="text-xl font-bold">
-                        Google Reviews
-                    </h2>
-                </div>
-                <div class="flex items-center mt-2">
-                    <span class="text-2xl font-bold">
-                        5.0
-                    </span>
-                    <div class="flex ml-2">
-                        <i class="fas fa-star text-yellow-500">
-                        </i>
-                        <i class="fas fa-star text-yellow-500">
-                        </i>
-                        <i class="fas fa-star text-yellow-500">
-                        </i>
-                        <i class="fas fa-star text-yellow-500">
-                        </i>
-                        <i class="fas fa-star text-yellow-500">
-                        </i>
-                    </div>
-                    <span class="ml-2 text-gray-600">
-                        (541)
-                    </span>
-                </div>
-            </div>
-            <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">
-                Review us on Google
-            </button>
+        <hr class="border-secondary" />
+        <div class="text-center text-white-50">
+          <p class="mb-0">© 2024 Ojan Catering. Semua hak dilindungi.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-gray-100 p-4 rounded-lg shadow">
-                <div class="flex items-center mb-2">
-                    <img alt="User profile picture" class="rounded-full mr-2" height="40" src="img/2.png" width="40" />
-                    <div>
-                        <div class="flex items-center">
-                            <span class="font-bold">
-                                Yunita Algerina
-                            </span>
-                            <i class="fas fa-check-circle text-blue-500 ml-1">
-                            </i>
-                        </div>
-                        <span class="text-gray-600 text-sm">
-                            5 days ago
-                        </span>
-                    </div>
-                </div>
-                <div class="flex items-center mb-2">
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                </div>
-                <p>
-                    Makanannya enak dan pelayanan juga fast respon
-                </p>
-            </div>
-            <div class="bg-gray-100 p-4 rounded-lg shadow">
-                <div class="flex items-center mb-2">
-                    <img alt="User profile picture" class="rounded-full mr-2" height="40" src="img/3.jpg" width="40" />
-                    <div>
-                        <div class="flex items-center">
-                            <span class="font-bold">
-                                Ayu Utami
-                            </span>
-                            <i class="fas fa-check-circle text-blue-500 ml-1">
-                            </i>
-                        </div>
-                        <span class="text-gray-600 text-sm">
-                            8 days ago
-                        </span>
-                    </div>
-                </div>
-                <div class="flex items-center mb-2">
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                </div>
-                <p>
-                    Very professional. Good packaging, good service, good taste, good portion. Delivery on time. Admin
-                    is good
-                </p>
-
-            </div>
-            <div class="bg-gray-100 p-4 rounded-lg shadow relative">
-                <div class="flex items-center mb-2">
-                    <img alt="User profile picture" class="rounded-full mr-2" height="40" src="img/4.png" width="40" />
-                    <div>
-                        <div class="flex items-center">
-                            <span class="font-bold">
-                                Sonirin
-                            </span>
-                            <i class="fas fa-check-circle text-blue-500 ml-1">
-                            </i>
-                        </div>
-                        <span class="text-gray-600 text-sm">
-                            8 days ago
-                        </span>
-                    </div>
-                </div>
-                <div class="flex items-center mb-2">
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                    <i class="fas fa-star text-yellow-500">
-                    </i>
-                </div>
-                <p>
-                    Good taste & service, also on-time delivery thank you
-                </p>
-                <button class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-200 p-2 rounded-full">
-                    <i class="fas fa-chevron-right">
-                    </i>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <div class="text-center py-16">
-        <h1 class="text-2xl font-bold mb-4">Angka Kami</h1>
-        <p class="text-lg mb-12">Kami bangga dengan pencapaian yang telah kami raih sejak 2007.</p>
-        <div class="flex justify-center space-x-16">
-            <div class="text-center">
-                <p class="text-4xl font-bold">5000+</p>
-                <p class="text-lg">Pelanggan Puas</p>
-            </div>
-            <div class="text-center">
-                <p class="text-4xl font-bold">1000+</p>
-                <p class="text-lg">Acara Diselenggarakan</p>
-            </div>
-            <div class="text-center">
-                <p class="text-4xl font-bold">16</p>
-                <p class="text-lg">Tahun Pengalaman</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="flex justify-center items-center min-h-screen">
-        <div class="flex w-3/4">
-            <!-- Left Section -->
-            <div class="w-1/2 p-8">
-                <div class="flex items-center mb-4">
-                    <i class="fas fa-envelope text-3xl"></i>
-                </div>
-                <h1 class="text-4xl font-bold text-green-500 mb-4">Hubungi Kami</h1>
-                <p class="text-lg">Kami siap membantu Anda dengan pertanyaan atau kebutuhan katering Anda.</p>
-            </div>
-            <!-- Right Section -->
-            <div class="w-1/2 p-8">
-                <form>
-                    <div class="mb-4">
-                        <label for="email" class="block text-sm font-semibold mb-2">Email</label>
-                        <input type="email" id="email" placeholder="Enter Email"
-                            class="w-full p-2 border border-gray-300 rounded">
-                    </div>
-                    <div class="flex mb-4">
-                        <div class="w-1/2 pr-2">
-                            <label for="first-name" class="block text-sm font-semibold mb-2">First Name</label>
-                            <input type="text" id="first-name" placeholder="First Name"
-                                class="w-full p-2 border border-gray-300 rounded">
-                        </div>
-                        <div class="w-1/2 pl-2">
-                            <label for="last-name" class="block text-sm font-semibold mb-2">Last Name</label>
-                            <input type="text" id="last-name" placeholder="Last Name"
-                                class="w-full p-2 border border-gray-300 rounded">
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <label for="message" class="block text-sm font-semibold mb-2">Message</label>
-                        <textarea id="message" placeholder="Enter Message"
-                            class="w-full p-2 border border-gray-300 rounded h-32"></textarea>
-                    </div>
-                    <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">Request Demo</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="text-center">
-        <h1 class="text-3xl font-bold text-green-600 mb-4">Siap untuk Makan Enak?</h1>
-        <p class="text-lg text-gray-800 mb-6">Bergabunglah dengan ribuan pelanggan yang telah merasakan kebahagiaan
-            makanan sehat dari Ojan Catering!</p>
-        <div class="space-x-4">
-            <button class="px-6 py-2 border border-black text-black rounded">Pesan Sekarang</button>
-            <button class="px-6 py-2 bg-green-600 text-white rounded">Lihat Menu</button>
-        </div>
-    </div>
-
-    <div class="flex justify-center items-center min-h-screen">
-        <div class="flex flex-col md:flex-row items-center md:items-start">
-            <div class="w-full md:w-1/2 p-4">
-                <iframe allowfullscreen="" height="450"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.4285042806027!2d109.59447032143349!3d-6.9076963717056765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7027b58abc1913%3A0x95be84a8e2848b4c!2sOhas%20Telur%20Asin!5e0!3m2!1sid!2sid!4v1730211170677!5m2!1sid!2sid"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>"
-                </iframe>
-            </div>
-            <div class="w-full md:w-1/2 p-4">
-                <div class="mb-4">
-                    <img alt="#" class="mb-2" height="100" src="img/logo.webp" width="100" />
-                    <h1 class="text-2xl font-bold">
-                        Ojan Catering
-                    </h1>
-                </div>
-                <p class="mb-2">
-                    Wuluh Wetan, RT.002/RW.5, Wuluh Tengah, Blimbing Wuluh, Kec. Siwalan, Kabupaten Pekalongan, Jawa
-                    Tengah 51154
-                </p>
-                <p class="mb-4">
-                    +6285526394417
-                </p>
-
-                <p class="mb-4">
-                    ©2024 by Ojan Catering
-                </p>
-
-            </div>
-        </div>
-    </div>
-
-    <footer class="p-8">
-        <div class="mb-4">
-            <h1 class="text-lg font-bold">Ojan Catering</h1>
-            <p class="text-sm">Makanan Sehat, Hidup Bahagia!</p>
-        </div>
-        <div class="mb-4">
-            <nav class="flex space-x-4">
-                <a href="#" class="text-sm">Tentang Kami</a>
-                <a href="#" class="text-sm">Layanan</a>
-                <a href="#" class="text-sm">Kontak</a>
-                <a href="#" class="text-sm">Blog</a>
-                <a href="#" class="text-sm">Karir</a>
-            </nav>
-        </div>
-        <hr class="border-gray-600 mb-4">
-        <div class="flex justify-between items-center">
-            <p class="text-xs">©2024 Ojan Catering. Semua hak dilindungi.</p>
-            <div class="flex space-x-4">
-                <a href="https://instagram.com/zan_ozan10" class="text-black text-xl"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/6285526394417" class="text-black text-xl"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://facebook.com/fauzan.ennajmiey" class="text-black text-xl"><i
-                        class="fab fa-facebook"></i></a>
-            </div>
-        </div>
-
-        <div class="fixed bottom-4 left-4">
-            <a href="tel:+6285526394417" class="bg-red-600 text-white p-4 rounded-full shadow-lg flex items-center">
-                <i class="fas fa-comments"></i>
-                <span class="ml-2">Chat</span>
-            </a>
-        </div>
+      </div>
     </footer>
 
-    <script>
-        function scrollkeatas() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            })
-        }
-    </script>
-
-    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+    <!-- Script Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

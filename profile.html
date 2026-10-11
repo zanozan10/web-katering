@@ -1,339 +1,335 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil - Ojan Catering</title>
+    <!-- CSS Bootstrap 5 & Font Awesome -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ojan Catering</title>
-
-    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Style the Image Used to Trigger the Modal */
-        #myImg {
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        #myImg:hover {
-            opacity: 0.7;
-        }
-
-        /* The Modal (background) */
-        .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Sit on top */
-            padding-top: 100px;
-            /* Location of the box */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.9);
-            /* Black w/ opacity */
-        }
-
-        /* Modal Content (Image) */
-        .modal-content {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-        }
-
-        /* Caption of Modal Image (Image Text) - Same Width as the Image */
-        #caption {
-            margin: auto;
-            display: block;
-            width: 80%;
-            max-width: 700px;
-            text-align: center;
-            color: #ccc;
-            padding: 10px 0;
-            height: 150px;
-        }
-
-        /* Add Animation - Zoom in the Modal */
-        .modal-content,
-        #caption {
-            animation-name: zoom;
-            animation-duration: 0.6s;
-        }
-
-        @keyframes zoom {
-            from {
-                transform: scale(0)
-            }
-
-            to {
-                transform: scale(1)
-            }
-        }
-
-        /* The Close Button */
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        /* 100% Image Width on Smaller Screens */
-        @media only screen and (max-width: 700px) {
-            .modal-content {
-                width: 100%;
-            }
-        }
-
-        .buttonToTop {
-            width: 50px;
-            height: 50px;
-            background-color: #000;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            bottom: 60px;
-            right: 10px;
-            cursor: pointer;
-        }
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f8f9fa;
+      }
+      .btn-custom {
+        background-color: #ff9800;
+        color: white;
+        border-radius: 30px;
+        padding: 10px 25px;
+        font-weight: 600;
+      }
+      .btn-custom:hover {
+        background-color: #e68a00;
+        color: white;
+      }
+      /* Efek banner transparan */
+      .page-header {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("img/5.webp") center/cover;
+        padding: 100px 0;
+        color: white;
+      }
+      .review-card {
+        transition: transform 0.3s ease;
+      }
+      .review-card:hover {
+        transform: translateY(-10px);
+      }
     </style>
-</head>
-
-<body>
-
-    <div class="buttonToTop" onclick="scrollkeatas()">
-        Top
-    </div>
-
-    <nav class="sticky top-0 flex items-center justify-center p-4 bg-white shadow-md">
-        <div class="container mx-auto flex items-center justify-between">
-            <img alt="#" class="h-12" height="50" src="img/logo.webp" width="150" />
-            <div class="flex items-center space-x-8 font-bold">
-                <a href="index.html">Home</a>
-                <a href="profile.html">Profile</a>
-                <a href="blog.html">Blog</a>
-                <a href="galery.html">Galery</a>
-                <a href="contact us.html">Contact Us</a>
-            </div>
-            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                Pesan Sekarang!
-            </a>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-3"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.webp" alt="Ojan Catering" height="50" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <!-- Menu Profile dibold karena sedang aktif -->
+            <li class="nav-item">
+              <a
+                class="nav-link active fw-semibold text-warning"
+                href="profile.html"
+                >Profile</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="galery.html">Galery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact us.html">Contact Us</a>
+            </li>
+          </ul>
+          <a href="https://wa.me/6285526394417" class="btn btn-custom shadow-sm"
+            ><i class="fa-solid fa-whatsapp"></i> Pesan Sekarang!</a
+          >
         </div>
+      </div>
     </nav>
 
-    <!-- Trigger the Modal -->
-    <img id="myImg" src="img/1.webp" alt="Snow" style="width:100%;max-width:300px justify-center">
+    <!-- HEADER HALAMAN -->
+    <header class="page-header text-center">
+      <div class="container">
+        <h1 class="display-4 fw-bold">Tentang Ojan Catering</h1>
+        <p class="lead mt-3">
+          Mengenal lebih dekat perjalanan kami menghadirkan kebahagiaan lewat
+          makanan sehat.
+        </p>
+      </div>
+    </header>
 
-    <div class="flex flex-col md:flex-row items-center justify-center min-h-screen">
-        <div class="bg-[#f5f5e6] p-8 md:w-1/2 text-center">
-            <h1 class="text-[#b35a3b] text-2xl font-bold mb-4">
-                Sejak 2007
-            </h1>
-            <p class="text-[#b35a3b] text-lg leading-relaxed">
-                Ojan Catering bangga menjadi salah satu mitra terpercaya BUMN dan perusahaan swasta dalam mengakomodir
-                kebutuhan nasi kotak dan katering premium bertema Nusantara sejak tahun 2007. Kami terus meningkatkan
-                kualitas, mutu makanan, serta pelayanan untuk kepuasan seluruh Sahabat Pangeran, khususnya di wilayah
-                DKI Jakarta dan sekitarnya ( Depok, Bekasi, Tanggerang ).
+    <!-- TENTANG KAMI -->
+    <section class="py-5 bg-white">
+      <div class="container py-4">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0 text-center">
+            <img
+              src="img/5.webp"
+              alt="Tentang Kami"
+              class="img-fluid rounded-4 shadow-lg"
+              style="max-height: 450px; object-fit: cover"
+            />
+          </div>
+          <div class="col-md-6 px-md-5">
+            <h6
+              class="text-warning fw-bold text-uppercase"
+              style="letter-spacing: 2px"
+            >
+              Sejak 2007
+            </h6>
+            <h2 class="fw-bold mb-4">Teman Setia Gaya Hidup Sehat Anda</h2>
+            <p class="text-secondary mb-3" style="line-height: 1.8">
+              Ojan Catering telah menjadi teman setia Anda dalam menjalani gaya
+              hidup sehat. Kami mengerti bahwa hidup itu sibuk, jadi biarkan
+              kami yang mengurus makanan Anda!
             </p>
-        </div>
-        <div class="md:w-1/2">
-            <img alt="A close-up of a meal tray with rice, chicken, and various side dishes" class="w-full h-auto"
-                height="400"
-                src="https://storage.googleapis.com/a1aa/image/yb4feYM1XCs6DktUU92YlhFdrUG9YrZep5WIOkRQfoefxk66E.jpg"
-                width="600" />
-        </div>
-    </div>
-
-    <div class="flex justify-center items-center min-h-screen">
-        <div class="flex bg-white shadow-lg rounded-lg overflow-hidden">
-            <div class="w-1/2">
-                <img alt="Person cooking vegetables in a wok in a clean kitchen" class="w-full h-full object-cover"
-                    height="400"
-                    src="https://storage.googleapis.com/a1aa/image/Y7DUV5AS8fUaSipE03zNRvIdY6EnXelomLeLug85vQYAsUXnA.jpg"
-                    width="600" />
-            </div>
-            <div class="w-1/2 p-8">
-                <h2 class="text-2xl font-bold text-[#8b5c5c] mb-4">
-                    Higienitas
-                </h2>
-                <p class="text-[#8b5c5c] leading-relaxed">
-                    Ojan Catering sangat mengutamakan kebersihan dan kesehatan. Kebersihan alat dan bahan serta
-                    kesehatan Sahabat Pangeran menjadi prioritas utama kami. Alat dan bahan yang tidak bersih akan
-                    menimbulkan kontaminasi yang dapat menyebabkan gangguan kesehatan Sahabat Ojan.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="flex flex-col md:flex-row">
-        <div class="md:w-1/2 p-8">
-            <h1 class="text-center text-[#8b4513] text-2xl font-bold mb-4">
-                Kualitas
-            </h1>
-            <p class="text-[#8b4513] text-lg leading-relaxed">
-                Ojan Catering memastikan kualitas bahan dan cara pengolahan terbaik untuk memastikan kesegaran dan mutu
-                gizi dari produk yang akan disajikan ke Sahabat Ojan. Ojan Catering juga selalu berusaha melakukan dan
-                mengedepankan kualitas pelayanan terbaik untuk kepuasan Sahabat Ojan.
+            <p class="text-secondary mb-4" style="line-height: 1.8">
+              Setiap porsi diracik oleh ahli gizi untuk memastikan Anda
+              mendapatkan nutrisi yang tepat dengan bahan berkualitas tinggi dan
+              harga yang terjangkau.
             </p>
-        </div>
-        <div class="md:w-1/2">
-            <img alt="Two hands exchanging a red box with Dapur Pangeran logo" class="w-full h-full object-cover"
-                height="400"
-                src="https://storage.googleapis.com/a1aa/image/CsQ5ptfzCgR2L6nxMQfe6tku9eXO5AIVIBD3fqhWBKbWFTddC.jpg"
-                width="600" />
-        </div>
-    </div>
-
-    <div class="flex items-center justify-center min-h-screen">
-        <div class="flex flex-col md:flex-row items-center bg-white p-8 rounded-lg shadow-lg">
-            <div class="md:w-1/2">
-                <img alt="A ladle pouring a vegetable stir-fry onto a plate" class="rounded-lg" height="400"
-                    src="https://storage.googleapis.com/a1aa/image/SiEaxVbbgBLaP5aziliffK6hUMLqxX1WrNU23OOwwlUbaqrTA.jpg"
-                    width="600" />
+            <div class="d-flex align-items-center gap-3">
+              <div
+                class="bg-light p-3 rounded-circle text-warning fs-4 shadow-sm"
+              >
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <div>
+                <h5 class="mb-0 fw-bold">100% Bahan Segar</h5>
+                <small class="text-muted"
+                  >Sayuran organik & daging pilihan</small
+                >
+              </div>
             </div>
-            <div class="md:w-1/2 mt-8 md:mt-0 md:ml-8 text-center md:text-left">
-                <h2 class="text-2xl font-semibold text-[#8b5c5c] mb-4">
-                    Ketepatan waktu
-                </h2>
-                <p class="text-[#8b5c5c]">
-                    Kami berani menjamin, setiap pesanan Sahabat akan diantarkan tepat waktu dan jika terjadi
-                    keterlambahan kami berani memberikan garansi 100% uang kembali
-                </p>
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <div class="flex justify-center items-center min-h-screen">
-        <div class="max-w-6xl mx-auto bg-[#f5f2e9] p-8 flex">
-            <div class="w-1/2 pr-8">
-                <div class="text-center mb-8">
-                    <h1 class="text-3xl font-bold text-[#8b5d3a]">
-                        CENTRAL KITCHEN
-                    </h1>
+    <!-- TESTIMONI GOOGLE -->
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Apa Kata Mereka?</h2>
+          <div
+            class="d-flex justify-content-center align-items-center gap-3 mt-3"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+              alt="Google"
+              height="30"
+            />
+            <h4 class="mb-0 fw-bold">5.0</h4>
+            <div class="text-warning fs-5">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+              ><i class="fa-solid fa-star"></i>
+            </div>
+            <span class="text-muted">(541 ulasan)</span>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Ulasan 1 -->
+          <div class="col-md-4">
+            <div
+              class="card review-card h-100 border-0 shadow-sm rounded-4 p-4"
+            >
+              <div class="d-flex align-items-center mb-3">
+                <img
+                  src="img/2.png"
+                  alt="User"
+                  class="rounded-circle me-3 border"
+                  height="50"
+                  width="50"
+                  style="object-fit: cover"
+                />
+                <div>
+                  <h6 class="fw-bold mb-0">Yunita Algerina</h6>
+                  <small class="text-muted">5 hari yang lalu</small>
                 </div>
-                <div class="text-center mb-8">
-                    <p class="text-[#8b5d3a]">
-                        Ojan Catering memiliki Dapur dengan
-                        <i>
-                            Standart
-                        </i>
-                        Hotel Bintang 5 dengan fasilitas memasak yang sangat lengkap dan higienis. Ini merupakan bentuk
-                        realisasi Komitmen Ojan Catering untuk memberikan yang terbaik bagi para Sahabat
-                    </p>
+              </div>
+              <div class="text-warning mb-2 fs-6">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-secondary fst-italic">
+                "Makanannya enak dan pelayanan juga fast respon."
+              </p>
+            </div>
+          </div>
+
+          <!-- Ulasan 2 -->
+          <div class="col-md-4">
+            <div
+              class="card review-card h-100 border-0 shadow-sm rounded-4 p-4"
+            >
+              <div class="d-flex align-items-center mb-3">
+                <img
+                  src="img/3.jpg"
+                  alt="User"
+                  class="rounded-circle me-3 border"
+                  height="50"
+                  width="50"
+                  style="object-fit: cover"
+                />
+                <div>
+                  <h6 class="fw-bold mb-0">Ayu Utami</h6>
+                  <small class="text-muted">8 hari yang lalu</small>
                 </div>
+              </div>
+              <div class="text-warning mb-2 fs-6">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-secondary fst-italic">
+                "Very professional. Good packaging, good service, good taste,
+                good portion. Delivery on time. Admin is good."
+              </p>
             </div>
-            <div class="w-1/2 flex justify-center">
-                <img alt="A modern, well-equipped central kitchen with stainless steel appliances and workstations"
-                    height="400"
-                    src="https://storage.googleapis.com/a1aa/image/80UsqmI62hZrEFQS7XErMocPSKxGwfuhmyxac10KS7fKcqrTA.jpg"
-                    width="800" />
-            </div>
-        </div>
-    </div>
+          </div>
 
-    <div class="flex justify-center items-center min-h-screen">
-        <div class="flex flex-col md:flex-row items-center md:items-start">
-            <div class="w-full md:w-1/2 p-4">
-                <iframe allowfullscreen="" height="450"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.4285042806027!2d109.59447032143349!3d-6.9076963717056765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7027b58abc1913%3A0x95be84a8e2848b4c!2sOhas%20Telur%20Asin!5e0!3m2!1sid!2sid!4v1730211170677!5m2!1sid!2sid"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>"
-                </iframe>
-            </div>
-            <div class="w-full md:w-1/2 p-4">
-                <div class="mb-4">
-                    <img alt="#" class="mb-2" height="100" src="img/logo.webp" width="100" />
-                    <h1 class="text-2xl font-bold">
-                        Ojan Catering
-                    </h1>
+          <!-- Ulasan 3 -->
+          <div class="col-md-4">
+            <div
+              class="card review-card h-100 border-0 shadow-sm rounded-4 p-4"
+            >
+              <div class="d-flex align-items-center mb-3">
+                <img
+                  src="img/4.png"
+                  alt="User"
+                  class="rounded-circle me-3 border"
+                  height="50"
+                  width="50"
+                  style="object-fit: cover"
+                />
+                <div>
+                  <h6 class="fw-bold mb-0">Sonirin</h6>
+                  <small class="text-muted">8 hari yang lalu</small>
                 </div>
-                <p class="mb-2">
-                    Wuluh Wetan, RT.002/RW.5, Wuluh Tengah, Blimbing Wuluh, Kec. Siwalan, Kabupaten Pekalongan, Jawa
-                    Tengah 51154
-                </p>
-                <p class="mb-4">
-                    +6285526394417
-                </p>
-
-                <p class="mb-4">
-                    ©2024 by Ojan Catering
-                </p>
-
+              </div>
+              <div class="text-warning mb-2 fs-6">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-secondary fst-italic">
+                "Good taste & service, also on-time delivery thank you."
+              </p>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <footer class="p-8">
-        <div class="mb-4">
-            <h1 class="text-lg font-bold">Ojan Catering</h1>
-            <p class="text-sm">Makanan Sehat, Hidup Bahagia!</p>
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white pt-5 pb-4 mt-4">
+      <div class="container text-center text-md-start">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h4 class="fw-bold" style="color: #ff9800">Ojan Catering</h4>
+            <p class="text-white-50">
+              Makanan Sehat, Hidup Bahagia!<br />Wuluh Wetan, RT.002/RW.5, Kab.
+              Pekalongan, Jawa Tengah 51154
+            </p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold">Tautan Cepat</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="index.html" class="text-white-50 text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="profile.html"
+                  class="text-white-50 text-decoration-none"
+                  >Profile</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact us.html"
+                  class="text-white-50 text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold">Sosial Media</h5>
+            <a
+              href="https://instagram.com/zan_ozan10"
+              class="text-white me-3 fs-4"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://facebook.com/fauzan.ennajmiey"
+              class="text-white me-3 fs-4"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://wa.me/6285526394417" class="text-white fs-4"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </div>
         </div>
-        <div class="mb-4">
-            <nav class="flex space-x-4">
-                <a href="#" class="text-sm">Tentang Kami</a>
-                <a href="#" class="text-sm">Layanan</a>
-                <a href="#" class="text-sm">Kontak</a>
-                <a href="#" class="text-sm">Blog</a>
-                <a href="#" class="text-sm">Karir</a>
-            </nav>
+        <hr class="border-secondary" />
+        <div class="text-center text-white-50">
+          <p class="mb-0">© 2024 Ojan Catering. Semua hak dilindungi.</p>
         </div>
-        <hr class="border-gray-600 mb-4">
-        <div class="flex justify-between items-center">
-            <p class="text-xs">©2024 Ojan Catering. Semua hak dilindungi.</p>
-            <div class="flex space-x-4">
-                <a href="https://instagram.com/zan_ozan10" class="text-black text-xl"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/6285526394417" class="text-black text-xl"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://facebook.com/fauzan.ennajmiey" class="text-black text-xl"><i
-                        class="fab fa-facebook"></i></a>
-            </div>
-        </div>
-        <div class="fixed bottom-4 left-4">
-            <a href="tel:+6285526394417" class="bg-red-600 text-white p-4 rounded-full shadow-lg flex items-center">
-                <i class="fas fa-comments"></i>
-                <span class="ml-2">Chat</span>
-            </a>
-        </div>
+      </div>
     </footer>
 
-    <script>
-        function scrollkeatas() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            })
-        }
-    </script>
-
-
-
-    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
